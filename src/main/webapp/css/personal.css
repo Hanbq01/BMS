@@ -1,0 +1,49 @@
+.title {
+	font-family: "黑体", sans-serif;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+}
+
+p {
+	font-size: 18px;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.editper, .changePassword {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #ccc;
+	z-index: 9999;
+	display: none;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.editper label, .changePassword label {
+	display: inline-block;
+	margin-bottom: 4px;
+	font-weight: bold;
+}
+
+.editper input[type="submit"], .editper input[type="button"],
+	.changePassword input[type="submit"], .changePassword input[type="button"],
+	#editButton, #changePasswordButton {
+	background-color: #4CAF50;
+	color: white;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: 8px;
+}
+
+.editper input[type="submit"]:hover, .editper input[type="button"]:hover,
+	.changePassword input[type="submit"]:hover, .changePassword input[type="button"]:hover,
+	#editButton:hover, #changePasswordButton:hover {
+	background-color: #3e8e41;
+}

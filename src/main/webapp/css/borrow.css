@@ -1,0 +1,48 @@
+h1 {
+	margin: auto;
+	font-size: 32px;
+	text-align: center;
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 20px 0;
+	font-size: 14px;
+	width: 100%;
+	max-height: calc(10 * ( 6px + 12px)+ 2px);
+	height: 100%;
+}
+
+th, td {
+	border: 1px solid #ccc;
+	padding: 6px 12px;
+	text-align: center;
+}
+
+th {
+	background-color: #f2f2f2;
+	font-weight: bold;
+}
+
+tr:nth-child(even) {
+	background-color: #fff;
+}
+
+tr:nth-child(odd) {
+	background-color: #f2f2f2;
+}
+
+td {
+	text-align: center;
+}
+
+.returned-yes {
+	color: red;
+	font-weight: bold;
+}
+
+.returned-no {
+	color: #00d700;
+	font-weight: bold;
+}
