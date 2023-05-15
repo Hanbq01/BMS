@@ -1,5 +1,6 @@
 # BMS-BookManagerSystem
 Javaweb写的仓库管理系统，使用jsp+jdbc+JavaScript+css，还用了部分Ajax技术，能力有限，真的在学了😫😫😫
+主要页面都是用jsp语言写的，使用tomcat8.5和mysql8.0.32，修改数据库登录用户名密码在util.DButil.java
 ### 持续更新...
 ## 0513 更新
 初次提交，已经完成了管理员界面的大部分代码，有初步的框架，练习自己的能力，同时完成小论文项目，所有代码纯手搓。JavaScript学的不太好，简单看了些教程和示例，
