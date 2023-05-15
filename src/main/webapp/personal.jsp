@@ -9,25 +9,7 @@
 <meta charset="UTF-8">
 <title>个人信息</title>
 <link rel="stylesheet" type="text/css" href="css/personal.css">
-<script>
-	function showEdit() {
-		// 显示 editper 的 div
-		document.querySelector('.editper').style.display = 'block';
-	}
-
-	function hideEdit() {
-		// 隐藏 editper 的 div
-		document.querySelector('.editper').style.display = 'none';
-	}
-	function showChangePassword() {
-		// 显示 changePassword 的 div
-		document.querySelector('.changePassword').style.display = 'block';
-	}
-
-	function hideChangePassword() {
-		document.querySelector('.changePassword').style.display = 'none';
-	}
-</script>
+<script src="js/showhidediv.js"></script>
 </head>
 <body>
 	<%
@@ -64,7 +46,7 @@
 	<p>
 		身份：<%=role%></p>
 
-	<div class="editper" style="display: none;">
+	<div id="editDiv" style="display: none;">
 		<form action="savePersonalInfo" method="post">
 			<label for="realnameInput">真实姓名：</label> <input type="text"
 				id="realnameInput" name="realname" value="<%=realname%>"><br>
@@ -76,16 +58,16 @@
 				value="取消" onclick="hideEdit()">
 		</form>
 	</div>
-	<div class="changePassword" style="display: none;">
+	<div id="changePassword" style="display: none;">
 		<form action="changePassword" method="post">
 			<label for="oldPasswordInput">旧密码：</label> <input type="password"
-				id="oldPasswordInput" name="oldPassword" required><br> <br>
-			<label for="newPasswordInput">新密码：</label> <input type="password"
-				id="newPasswordInput" name="newPassword" required><br> <br>
-			<label for="confirmPasswordInput">确认密码：</label> <input
-				type="password" id="confirmPasswordInput" name="confirmPassword" required><br>
-			<br> <input type="submit" value="保存"> <input
-				type="button" value="取消" onclick="hideChangePassword()">
+				id="oldPasswordInput" name="oldPassword" required><br>
+			<br> <label for="newPasswordInput">新密码：</label> <input
+				type="password" id="newPasswordInput" name="newPassword" required><br>
+			<br> <label for="confirmPasswordInput">确认密码：</label> <input
+				type="password" id="confirmPasswordInput" name="confirmPassword"
+				required><br> <br> <input type="submit" value="保存">
+			<input type="button" value="取消" onclick="hideChangePassword()">
 		</form>
 
 	</div>

@@ -7,22 +7,7 @@
 <meta charset="UTF-8">
 <title>图书管理系统</title>
 <link rel="stylesheet" href="css/book.css">
-<script type="text/javascript">
-	function editBook(id, title, author, publisher, publishDate, quantity) {
-		document.getElementById('editId').value = id;
-		document.getElementById('editTitle').value = title;
-		document.getElementById('editAuthor').value = author;
-		document.getElementById('editPublisher').value = publisher;
-		document.getElementById('editPublishDate').value = publishDate;
-		document.getElementById('editQuantity').value = quantity;
-		document.getElementById('editDiv').style.display = 'block';
-	}
-	
-	function cancelEdit() {
-		document.getElementById('editDiv').style.display = 'none';
-	}
-</script>
-
+<script src="js/showhidediv.js"></script>
 </head>
 <body>
 	<p>图书列表</p>

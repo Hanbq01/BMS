@@ -20,10 +20,10 @@
 		</tr>
 		<%
 		Connection conn = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
+				PreparedStatement ps = null;
+				ResultSet rs = null;
 
-		try {
+				try {
 			// 获取数据库连接
 			conn = DButil.getConnection();
 

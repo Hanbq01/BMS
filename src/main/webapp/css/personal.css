@@ -11,7 +11,7 @@ p {
 	text-align: center;
 }
 
-.editper, .changePassword {
+#editDiv, #changePassword {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -24,14 +24,14 @@ p {
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.editper label, .changePassword label {
+#editDiv label, #changePassword label {
 	display: inline-block;
 	margin-bottom: 4px;
 	font-weight: bold;
 }
 
-.editper input[type="submit"], .editper input[type="button"],
-	.changePassword input[type="submit"], .changePassword input[type="button"],
+#editDiv input[type="submit"], #editDiv input[type="button"],
+	#changePassword input[type="submit"], #changePassword input[type="button"],
 	#editButton, #changePasswordButton {
 	background-color: #4CAF50;
 	color: white;
@@ -42,8 +42,8 @@ p {
 	margin-right: 8px;
 }
 
-.editper input[type="submit"]:hover, .editper input[type="button"]:hover,
-	.changePassword input[type="submit"]:hover, .changePassword input[type="button"]:hover,
+#editDiv input[type="submit"]:hover, #editDiv input[type="button"]:hover,
+	#changePassword input[type="submit"]:hover, #changePassword input[type="button"]:hover,
 	#editButton:hover, #changePasswordButton:hover {
 	background-color: #3e8e41;
 }
