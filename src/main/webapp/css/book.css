@@ -52,13 +52,14 @@ button {
 	font-size: 14px;
 	margin-bottom: 4px;
 	cursor: pointer;
+	border-radius: 5px
 }
 
 button:hover {
 	background-color: #3e8e41;
 }
 
-#editDiv {
+.showandhidediv {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -71,13 +72,13 @@ button:hover {
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-#editDiv label {
+.showandhidediv label {
 	display: inline-block;
 	margin-bottom: 4px;
 	font-weight: bold;
 }
 
-#editDiv input[type="text"], #editDiv input[type="date"] {
+.showandhidediv input[type="text"], .showandhidediv input[type="date"] {
 	width: 100%;
 	padding: 8px;
 	font-size: 14px;
@@ -87,7 +88,8 @@ button:hover {
 	box-sizing: border-box;
 }
 
-#editDiv input[type="submit"], #editDiv input[type="button"] {
+.showandhidediv input[type="submit"], .showandhidediv input[type="button"]
+	{
 	background-color: #4CAF50;
 	color: white;
 	padding: 8px 16px;
@@ -97,7 +99,7 @@ button:hover {
 	margin-right: 8px;
 }
 
-#editDiv input[type="submit"]:hover, #editDiv input[type="button"]:hover
+.showandhidediv input[type="submit"]:hover, .showandhidediv input[type="button"]:hover
 	{
 	background-color: #3e8e41;
 }

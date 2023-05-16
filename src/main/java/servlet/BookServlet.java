@@ -102,7 +102,7 @@ public class BookServlet extends HttpServlet {
 			ps.executeUpdate();
 
 			// 重定向到图书列表页
-			response.sendRedirect("bookservlet");
+			response.sendRedirect("book");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -171,7 +171,7 @@ public class BookServlet extends HttpServlet {
 			ps.executeUpdate();
 
 			// 重定向到图书列表页
-			response.sendRedirect("bookservlet");
+			response.sendRedirect("book");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

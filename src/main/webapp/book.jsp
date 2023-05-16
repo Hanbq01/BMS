@@ -8,9 +8,18 @@
 <title>图书管理系统</title>
 <link rel="stylesheet" href="css/book.css">
 <script src="js/showhidediv.js"></script>
+<style>
+.addbtn {
+	text-align: right;
+	margin-right: 20px;
+}
+</style>
 </head>
 <body>
-	<p>图书列表</p>
+	<p>
+		图书列表
+		<div class="addbtn"><button id="addBtn" onclick="showAddDiv()">添加图书</button></div>
+	</p>
 	<div class="table-container">
 		<table border="1">
 			<tr>
@@ -78,7 +87,7 @@
 
 		</table>
 	</div>
-	<div id="editDiv" style="display: none;">
+	<div id="editDiv" class="showandhidediv" style="display: none;">
 		<form action="book" method="post">
 			<input type="hidden" name="action" value="update"> <input
 				type="hidden" name="id" id="editId"> <label>书名：</label><input
@@ -91,6 +100,17 @@
 			<input type="button" value="取消" onclick="cancelEdit()">
 		</form>
 	</div>
-
+	<div id="addDiv" class="showandhidediv" style="display: none;">
+		<form action="book" method="post">
+			<input type="hidden" name="action" value="add"> <label>书名：</label><input
+				type="text" name="title"><br> <label>作者：</label><input
+				type="text" name="author"><br> <label>出版社：</label><input
+				type="text" name="publisher"><br> <label>出版日期：</label><input
+				type="date" name="publishDate"><br> <label>库存：</label><input
+				type="text" name="quantity"><br> <input type="submit"
+				value="保存"> <input type="button" value="取消"
+				onclick="cancelAdd()">
+		</form>
+	</div>
 </body>
 </html>

@@ -39,3 +39,9 @@ function editBook(id, title, author, publisher, publishDate, quantity) {
 function cancelEdit() {
 	toggleVisibility('editDiv');
 }
+function showAddDiv() {
+	toggleVisibility('addDiv');
+}
+function cancelAdd() {
+	toggleVisibility('addDiv');
+}

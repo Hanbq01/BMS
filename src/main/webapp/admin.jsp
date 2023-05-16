@@ -31,12 +31,7 @@
 
 	</main>
 	<div class="content">
-		<iframe  src="personal.jsp" name="main"  scrolling="auto" target="_self"></iframe>
+		<iframe src="personal.jsp" name="main" scrolling="auto" target="_self"></iframe>
 	</div>
 </body>
-
-
-</frameset>
-
-
 </html>

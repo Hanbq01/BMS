@@ -9,15 +9,15 @@
 <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-	<h1>欢迎访问图书管理系统！</h1>
-	
+	<h1>欢迎访问图书管理系统!</h1>
+
 	<%-- 显示错误信息 --%>
 	<c:if test="${not empty error}">
 		<div class="error-box">
 			<span class="error-message">${error}</span>
 		</div>
 	</c:if>
-	
+
 	<form method="post" action="login">
 		<table border="0">
 			<tr>
@@ -43,5 +43,9 @@
 			</tr>
 		</table>
 	</form>
+
+	<p>
+		还没有注册？点击这里<a href="register.jsp">立即注册</a>
+	</p>
 </body>
 </html>
