@@ -1,5 +1,5 @@
 # BMS-BookManagerSystem
-Javaweb写的仓库管理系统，使用jsp+jdbc+JavaScript+css，没有框架，很简单的图书管理系统。是我的课程项目，不适合用来做毕设，过于简单。
+Javaweb写的仓库管理系统，使用jsp+jdbc+JavaScript+css，没有框架，很简单的图书管理系统。是我的课程项目，没有技术亮点，不适合用来做毕设，过于简单。
 主要页面都是用jsp语言写的，使用tomcat8.5和mysql8.0.32，修改数据库登录用户名密码在util.DButil.java
 目前正在更新
 ### 0513 更新
