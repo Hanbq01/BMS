@@ -11,7 +11,7 @@ Javaweb写的仓库管理系统，使用jsp+jdbc+JavaScript+css，没有框架�
 的方法来控制显示和隐藏，感觉效果还不错，还是可以用的
 ![image](https://github.com/Hanbq01/BMS/assets/127653499/36b8265a-1f4f-4c33-9387-1e8619ca798b)
 ### 0515更新
-改了一下JavaScript，加了一个js文件，把借阅记录和借阅人信息页面写好了，md，ajax没研究明白，使用ajax加载一个带ajax的页面还没想到怎么弄，换成了使用iframe加载页面，和我想要的效果差不多，也不错，等我再学一学看看怎么改回ajax
+改了一下JavaScript，加了一个js文件，把借阅记录和借阅人信息页面写好了，md，ajax没研究明白，使用ajax加载一个带ajax的页面会导致里边需要加载的那个打不开，于是换成了使用iframe加载页面，和我想要的效果差不多，也不错，等我再学一学看看怎么改回ajax
 ### 0516更新
 新增添加图书功能，新增注册功能，至此，管理员功能基本完善，后续想到啥会继续添加，艹感觉自己还挺fw，还需要继续深入学习
 ![image](https://github.com/Hanbq01/BMS/assets/127653499/0b31fe3e-f809-48cb-9ac5-9f05988cc556)
