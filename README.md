@@ -17,3 +17,9 @@ Javaweb写的仓库管理系统，使用jsp+jdbc+JavaScript+css，没有框架�
 ![image](https://github.com/Hanbq01/BMS/assets/127653499/0b31fe3e-f809-48cb-9ac5-9f05988cc556)
 ![image](https://github.com/Hanbq01/BMS/assets/127653499/93db1cc0-1a87-45b5-82ac-e7396c52bb96)
 
+# 0521 完成所有功能
+请自己看截图
+图书管理界面，新增了查找功能
+![image](https://github.com/Hanbq01/BMS/assets/127653499/1b46f9b8-6195-43db-8bb1-762cb03bb54b)
+
+
