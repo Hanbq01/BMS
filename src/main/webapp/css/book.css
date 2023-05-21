@@ -103,3 +103,9 @@ button:hover {
 	{
 	background-color: #3e8e41;
 }
+
+.findbook, .addbtn {
+	margin: 0 auto;
+	width: 60%;
+	text-align: center;
+}

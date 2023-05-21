@@ -3,6 +3,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- 
+
+个人信息页面
+管理员和普通用户都会显示，内容有个人信息和身份
+
+ -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +18,22 @@
 <script src="js/showhidediv.js"></script>
 </head>
 <body>
+
+<!-- 未登录提示 -->
+	<%
+	String username1 = (String) session.getAttribute("username");
+	if (username1 == null || "".equals(username1)) {
+		response.setContentType("text/html;charset=UTF-8");
+	%>
+	<script>
+		alert("未登录，请登录后使用！");
+		window.location.href = "login.jsp";
+	</script>
+	<%
+	return;
+	}
+	%>
+
 	<%
 	String username = (String) session.getAttribute("username");
 	Connection conn = null;

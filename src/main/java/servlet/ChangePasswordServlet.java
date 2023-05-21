@@ -15,6 +15,10 @@ import javax.servlet.http.HttpSession;
 
 import util.DButil;
 
+/*
+ *更改密码的操作 
+ */
+
 @WebServlet("/changePassword")
 public class ChangePasswordServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

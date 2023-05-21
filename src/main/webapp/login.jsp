@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- 
+
+登陆页面
+登录后页面内大部分功能才可用，下方有注册页面
+
+ -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +25,7 @@
 	</c:if>
 
 	<form method="post" action="login">
-		<table border="0">
+		<table ·border="0">
 			<tr>
 				<td>用户名：</td>
 				<td><input type="text" name="username" placeholder="请输入用户名"
@@ -34,7 +40,7 @@
 				<td>身 份：</td>
 				<td><select name="role" required>
 						<option value="">请选择身份</option>
-						<option value="normal">普通用户</option>
+						<option value="user">普通用户</option>
 						<option value="admin">管理员</option>
 				</select></td>
 			</tr>

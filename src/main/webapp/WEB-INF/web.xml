@@ -6,7 +6,7 @@
 	<display-name>BookManagerSystem</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>login.jsp</welcome-file>
 		<welcome-file>index.htm</welcome-file>
 		<welcome-file>default.html</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
@@ -57,7 +57,7 @@
 		<servlet-name>ChangePasswordServlet</servlet-name>
 		<url-pattern>/changepasswordservlet</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>RegisterServlet</servlet-name>
 		<servlet-class>servlet/RegisterServlet</servlet-class>
@@ -65,5 +65,23 @@
 	<servlet-mapping>
 		<servlet-name>RegisterServlet</servlet-name>
 		<url-pattern>/registerservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BorrowServlet</servlet-name>
+		<servlet-class>servlet/BorrowServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowServlet</servlet-name>
+		<url-pattern>/borrowservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReturnServlet</servlet-name>
+		<servlet-class>servlet/ReturnServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReturnServlet</servlet-name>
+		<url-pattern>/returnservlet</url-pattern>
 	</servlet-mapping>
 </web-app>

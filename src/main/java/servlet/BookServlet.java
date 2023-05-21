@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,6 +18,10 @@ import javax.servlet.http.HttpServletResponse;
 import entity.Book;
 import util.DButil;
 
+/*
+ *图书信息的增删改操作 
+ */
+
 @WebServlet("/book")
 public class BookServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -26,7 +31,6 @@ public class BookServlet extends HttpServlet {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-
 		try {
 			// 查询所有图书信息
 			conn = DButil.getConnection();
@@ -39,7 +43,7 @@ public class BookServlet extends HttpServlet {
 			while (rs.next()) {
 				Book book = new Book();
 				book.setId(rs.getInt("id"));
-				book.setTitle(rs.getString("title"));
+				book.setbookname(rs.getString("bookname"));
 				book.setAuthor(rs.getString("author"));
 				book.setPublisher(rs.getString("publisher"));
 				book.setPublishDate(rs.getString("publish_date"));
@@ -84,7 +88,7 @@ public class BookServlet extends HttpServlet {
 
 		try {
 			// 获取请求参数
-			String title = request.getParameter("title");
+			String bookname = request.getParameter("bookname");
 			String author = request.getParameter("author");
 			String publisher = request.getParameter("publisher");
 			String publishDate = request.getParameter("publishDate");
@@ -92,9 +96,9 @@ public class BookServlet extends HttpServlet {
 
 			// 添加新图书信息到数据库
 			conn = DButil.getConnection();
-			String sql = "insert into book(title, author, publisher, publish_date, quantity) values(?,?,?,?,?)";
+			String sql = "insert into book(bookname, author, publisher, publish_date, quantity) values(?,?,?,?,?)";
 			ps = conn.prepareStatement(sql);
-			ps.setString(1, title);
+			ps.setString(1, bookname);
 			ps.setString(2, author);
 			ps.setString(3, publisher);
 			ps.setString(4, publishDate);
@@ -152,7 +156,7 @@ public class BookServlet extends HttpServlet {
 		try {
 			// 获取请求参数
 			int id = Integer.parseInt(request.getParameter("id"));
-			String title = request.getParameter("title");
+			String bookname = request.getParameter("bookname");
 			String author = request.getParameter("author");
 			String publisher = request.getParameter("publisher");
 			String publishDate = request.getParameter("publishDate");
@@ -160,9 +164,9 @@ public class BookServlet extends HttpServlet {
 
 			// 更新图书信息
 			conn = DButil.getConnection();
-			String sql = "update book set title=?, author=?, publisher=?, publish_date=?, quantity=? where id=?";
+			String sql = "update book set bookname=?, author=?, publisher=?, publish_date=?, quantity=? where id=?";
 			ps = conn.prepareStatement(sql);
-			ps.setString(1, title);
+			ps.setString(1, bookname);
 			ps.setString(2, author);
 			ps.setString(3, publisher);
 			ps.setString(4, publishDate);

@@ -60,3 +60,25 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background-color: #333;
 }
+
+.error {
+	color: red;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.error-box {
+	background-color: #ffab91;
+	padding: 10px;
+	margin: auto;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	width: 33%;
+	text-align: center;
+}
+
+.error-message {
+	font-size: 16px;
+	color: #f00;
+	font-size: 16px;
+}

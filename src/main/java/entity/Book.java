@@ -4,7 +4,7 @@ public class Book {
 	// 图书编号
 	public int id;
 	// 书名
-	public String title;
+	public String bookname;
 	// 作者
 	public String author;
 	// 出版社
@@ -15,9 +15,9 @@ public class Book {
 	public int quantity;
 
 	// 构造方法
-	public Book(int id, String title, String author, String publisher, String publishDate, int quantity) {
+	public Book(int id, String bookname, String author, String publisher, String publishDate, int quantity) {
 		this.id = id;
-		this.title = title;
+		this.bookname = bookname;
 		this.author = author;
 		this.publisher = publisher;
 		this.publishDate = publishDate;
@@ -37,12 +37,12 @@ public class Book {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getbookname() {
+		return bookname;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setbookname(String bookname) {
+		this.bookname = bookname;
 	}
 
 	public String getAuthor() {

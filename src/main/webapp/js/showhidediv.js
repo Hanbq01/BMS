@@ -26,19 +26,7 @@ function hideChangePassword() {
 	// 隐藏 changePassword 的 div
 	toggleVisibility('changePassword');
 }
-function editBook(id, title, author, publisher, publishDate, quantity) {
-	document.getElementById('editId').value = id;
-	document.getElementById('editTitle').value = title;
-	document.getElementById('editAuthor').value = author;
-	document.getElementById('editPublisher').value = publisher;
-	document.getElementById('editPublishDate').value = publishDate;
-	document.getElementById('editQuantity').value = quantity;
-	toggleVisibility('editDiv');
-}
 
-function cancelEdit() {
-	toggleVisibility('editDiv');
-}
 function showAddDiv() {
 	toggleVisibility('addDiv');
 }

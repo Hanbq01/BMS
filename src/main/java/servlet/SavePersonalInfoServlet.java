@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import util.DButil;
 
+/*
+ *更改个人信息的操作
+ */
+
 @WebServlet("/savePersonalInfo")
 public class SavePersonalInfoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
