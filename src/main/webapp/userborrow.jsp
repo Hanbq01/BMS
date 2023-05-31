@@ -15,12 +15,26 @@
 <title>借阅图书</title>
 <link rel="stylesheet" href="css/book.css">
 <link rel="stylesheet" href="css/userborrow.css">
-<style>
-</style>
+<script>
+    function showReturnDate() {
+        // 获取当前日期
+        var currentDate = new Date();
+        // 计算14天后的日期
+        var returnDate = new Date(currentDate.getTime() + 14 * 24 * 60 * 60 * 1000);
+        // 格式化日期
+        var year = returnDate.getFullYear();
+        var month = returnDate.getMonth() + 1;
+        month = month < 10 ? '0' + month : month;
+        var day = returnDate.getDate();
+        day = day < 10 ? '0' + day : day;
+        // 弹出提示框
+        alert('图书最大借阅期限14天，请于' + year + '-' + month + '-' + day + '之前归还');
+    }
+</script>
 </head>
 <body>
 
-<!-- 未登录提示 -->
+	<!-- 未登录提示 -->
 	<%
 	String username = (String) session.getAttribute("username");
 	if (username == null || "".equals(username)) {
@@ -99,9 +113,9 @@
 				<td><%=rs.getString("publish_date")%></td>
 				<td><%=rs.getInt("quantity")%></td>
 				<td>
-					<form method="post" action="borrow">
+					<form method="post" action="borrow" onsubmit="showReturnDate()">
 						<input type="hidden" name="bookId" value="<%=rs.getInt("id")%>">
-						<input type="submit" value="借阅">
+						<input type="submit" value="借阅" >
 					</form>
 				</td>
 			</tr>

@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<!-- 未登录提示 -->
+	<!-- 未登录提示 -->
 	<%
 	String username1 = (String) session.getAttribute("username");
 	if (username1 == null || "".equals(username1)) {
@@ -54,7 +54,9 @@
 			String realname = rs.getString("realname");
 			String phone = rs.getString("phone");
 			String email = rs.getString("email");
+			String address = rs.getString("address");
 			String role = rs.getString("role");
+			String regtime = rs.getTimestamp("reg_time").toString();
 	%>
 	<h1 class="title">个人信息</h1>
 	<p>
@@ -66,7 +68,11 @@
 	<p>
 		邮箱：<%=email%></p>
 	<p>
+		地址：<%=address%></p>
+	<p>
 		身份：<%=role%></p>
+	<p>
+		注册时间：<%=regtime%></p>
 
 	<div id="editDiv" style="display: none;">
 		<form action="savePersonalInfo" method="post">
@@ -76,8 +82,10 @@
 				id="phoneInput" name="phone" value="<%=phone%>"><br> <br>
 			<label for="emailInput">邮箱：</label> <input type="email"
 				id="emailInput" name="email" value="<%=email%>"><br> <br>
-			<input type="submit" value="保存"> <input type="button"
-				value="取消" onclick="hideEdit()">
+			<label for="addressInput">地址：</label> <input type="text"
+				id="addressInput" name="address" value="<%=address%>"><br>
+			<br>、 <input type="submit" value="保存"> <input
+				type="button" value="取消" onclick="hideEdit()">
 		</form>
 	</div>
 	<div id="changePassword" style="display: none;">

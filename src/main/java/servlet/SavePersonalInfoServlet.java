@@ -33,7 +33,7 @@ public class SavePersonalInfoServlet extends HttpServlet {
 		// 更新数据库中的用户信息
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "UPDATE users SET realname=?, phone=?, email=? WHERE username=?";
+		String sql = "UPDATE users SET realname=?, phone=?, email=?, address=? WHERE username=?";
 		try {
 			// 建立数据库连接
 			conn = DButil.getConnection();
