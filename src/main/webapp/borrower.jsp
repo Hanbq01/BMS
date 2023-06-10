@@ -105,7 +105,7 @@ function cancelEdit() {
 			<td><%=rs.getTimestamp("reg_time").toString()%></td>
 			<td>
 				<button id="editBtn_<%=rs.getInt("id")%>"
-					onclick="editPer(<%=rs.getInt("id")%>,'<%=rs.getString("username")%>','<%=rs.getString("realname")%>','<%=rs.getString("phone")%>','<%=rs.getString("address")%>','<%=rs.getString("email")%>')">修改</button>
+					onclick="editPer(<%=rs.getInt("id")%>,'<%=rs.getString("username")%>','<%=rs.getString("realname")%>','<%=rs.getString("phone")%>','<%=rs.getString("email")%>','<%=rs.getString("address")%>')">修改</button>
 				<button id="delBtn_<%=rs.getInt("id")%>"
 					onclick="if(confirm('确认删除吗？')){document.getElementById('deleteForm_<%=rs.getInt("id")%>').submit();}">
 					删除</button>
@@ -137,7 +137,7 @@ function cancelEdit() {
 				type="text" name="username" id="editusername"><br> <label>真实姓名：</label><input
 				type="text" name="realname" id="editrealname"><br> <label>电话号码：</label><input
 				type="text" name="phone" id="editphone"><br> <label>电子邮箱：</label><input
-				type="date" name="email" id="editemail"><br> <label>地址：</label><input
+				type="text" name="email" id="editemail"><br> <label>地址：</label><input
 				type="text" name="address" id="editaddress"><br> <input
 				type="submit" value="保存"> <input type="button" value="取消"
 				onclick="cancelEdit()">

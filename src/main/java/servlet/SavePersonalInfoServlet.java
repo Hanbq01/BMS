@@ -28,6 +28,7 @@ public class SavePersonalInfoServlet extends HttpServlet {
 		String realname = request.getParameter("realname");
 		String phone = request.getParameter("phone");
 		String email = request.getParameter("email");
+		String address=request.getParameter("address");
 		// 获取登录用户的用户名，也就是要更新的用户的用户名
 		String username = (String) request.getSession().getAttribute("username");
 		// 更新数据库中的用户信息
@@ -43,7 +44,8 @@ public class SavePersonalInfoServlet extends HttpServlet {
 			ps.setString(1, realname);
 			ps.setString(2, phone);
 			ps.setString(3, email);
-			ps.setString(4, username);
+			ps.setString(4, address);
+			ps.setString(5, username);
 			// 执行 SQL 更新操作
 			ps.executeUpdate();
 			// 返回成功信息
